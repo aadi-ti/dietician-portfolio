@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nutrition Client Intake Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    html { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="bg-black text-white">
+
+  <main class="min-h-screen flex items-center justify-center px-4 py-16">
+    <div class="w-full max-w-4xl bg-white text-black shadow-xl rounded-2xl p-8 sm:p-10 space-y-10">
+
+      <!-- Header -->
+      <header class="text-center">
+        <h1 class="text-3xl font-bold text-black">Nutrition Client Intake Form</h1>
+        <p class="text-gray-600 mt-2 text-sm">Fill out your details to help us personalize your wellness journey.</p>
+      </header>
+
+      <form id="nutrition-form" enctype="multipart/form-data" class="space-y-10">
+
+        <!-- Basic Info -->
+        <section>
+          <h2 class="text-xl font-semibold text-gray-800 mb-4 border-b pb-2">Basic Information</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <input type="text" name="fullName" placeholder="Full Name" required class="form-input w-full rounded-md border-gray-300" />
+            <input type="email" name="email" placeholder="Email" required class="form-input w-full rounded-md border-gray-300" />
+            <input type="text" name="phone" placeholder="Phone Number" class="form-input w-full rounded-md border-gray-300" />
+            <input type="number" name="age" placeholder="Age" class="form-input w-full rounded-md border-gray-300" />
+            <select name="gender" class="form-select w-full rounded-md border-gray-300">
+              <option>Male</option>
+              <option>Female</option>
+              <option>Non-binary</option>
+              <option>Prefer not to say</option>
+            </select>
+            <input type="text" name="height" placeholder="Height" class="form-input w-full rounded-md border-gray-300" />
+            <input type="text" name="weight" placeholder="Weight" class="form-input w-full rounded-md border-gray-300" />
+          </div>
+        </section>
+
+        <!-- Health Goals -->
+        <section>
+          <h2 class="text-xl font-semibold text-gray-800 mb-4 border-b pb-2">Health Goals</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <label><input type="checkbox" name="healthGoals" value="Weight loss" /> Weight loss</label>
+            <label><input type="checkbox" name="healthGoals" value="Weight gain" /> Weight gain</label>
+            <label><input type="checkbox" name="healthGoals" value="Improve digestion" /> Improve digestion</label>
+            <label><input type="checkbox" name="healthGoals" value="Manage a health condition" /> Manage a health condition</label>
+            <label><input type="checkbox" name="healthGoals" value="Increase energy" /> Increase energy</label>
+            <label><input type="checkbox" name="healthGoals" value="Sports performance" /> Sports performance</label>
+            <label><input type="checkbox" name="healthGoals" value="General wellness" /> General wellness</label>
+            <label class="col-span-2">
+              <input type="checkbox" name="healthGoals" value="Other" /> Other: 
+              <input type="text" name="healthGoalsOther" class="form-input ml-2 w-1/2 rounded-md border-gray-300" />
+            </label>
+          </div>
+        </section>
+
+        <!-- Physical Activity -->
+        <section>
+          <h2 class="text-xl font-semibold text-gray-800 mb-4 border-b pb-2">How physically active are you?</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+            <label><input type="radio" name="activityLevel" value="Sedentary" /> Sedentary</label>
+            <label><input type="radio" name="activityLevel" value="Lightly active" /> Lightly active</label>
+            <label><input type="radio" name="activityLevel" value="Moderately active" /> Moderately active</label>
+            <label><input type="radio" name="activityLevel" value="Very active" /> Very active</label>
+            <label><input type="radio" name="activityLevel" value="Athlete" /> Athlete/Intense training</label>
+          </div>
+        </section>
+
+        <!-- Dietary Preferences -->
+        <section>
+          <h2 class="text-xl font-semibold text-gray-800 mb-4 border-b pb-2">Dietary Preferences</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <label><input type="checkbox" name="diet" value="Vegetarian" /> Vegetarian</label>
+            <label><input type="checkbox" name="diet" value="Vegan" /> Vegan</label>
+            <label><input type="checkbox" name="diet" value="Ovo Vegetarian" /> Ovo Vegetarian</label>
+            <label class="col-span-2">
+              <input type="checkbox" name="diet" value="Other" /> Other: 
+              <input type="text" name="dietOther" class="form-input ml-2 w-1/2 rounded-md border-gray-300" />
+            </label>
+          </div>
+
+          <div class="mt-6">
+            <h2 class="text-xl font-semibold text-gray-800 mb-2 border-b pb-1">Food allergies or intolerances</h2>
+            <input type="text" name="allergies" placeholder="Mention any known allergies or intolerances" class="form-input w-full mt-2 rounded-md border-gray-300" />
+          </div>
+
+          <div class="mt-6">
+            <h2 class="text-xl font-semibold text-gray-800 mb-2 border-b pb-1">Meals Per Day</h2>
+            <select name="mealsPerDay" class="form-select w-full mt-2 rounded-md border-gray-300">
+              <option value="">Meals per day</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4 or more</option>
+            </select>
+          </div>
+
+          <div class="mt-6">
+            <h2 class="text-xl font-semibold text-gray-800 mb-2 border-b pb-1">Water Intake</h2>
+            <input type="text" name="waterIntake" placeholder="Litres of water per day" class="form-input w-full mt-2 rounded-md border-gray-300" />
+          </div>
+
+          <div class="mt-6">
+            <h2 class="text-xl font-semibold text-gray-800 mb-2 border-b pb-1">Supplements</h2>
+            <input type="text" name="supplements" placeholder="Any supplements you take" class="form-input w-full mt-2 rounded-md border-gray-300" />
+          </div>
+        </section>
+
+        <!-- Medical History -->
+        <section>
+          <h2 class="text-xl font-semibold text-gray-800 mb-4 border-b pb-2">Medical Background</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <label><input type="checkbox" name="conditions" value="Diabetes" /> Diabetes</label>
+            <label><input type="checkbox" name="conditions" value="Hypertension" /> Hypertension</label>
+            <label><input type="checkbox" name="conditions" value="Thyroid issues" /> Thyroid issues</label>
+            <label><input type="checkbox" name="conditions" value="PCOS/PCOD" /> PCOS/PCOD</label>
+            <label><input type="checkbox" name="conditions" value="Digestive issues" /> Digestive issues</label>
+            <label><input type="checkbox" name="conditions" value="High cholesterol" /> High cholesterol</label>
+            <label><input type="checkbox" name="conditions" value="None" /> None</label>
+            <label class="col-span-2">
+              <input type="checkbox" name="conditions" value="Other" /> Other: 
+              <input type="text" name="conditionsOther" class="form-input ml-2 w-1/2 rounded-md border-gray-300" />
+            </label>
+          </div>
+
+          <div class="mt-6">
+            <h2 class="text-xl font-semibold text-gray-800 mb-2 border-b pb-1">Current Medications</h2>
+            <input type="text" name="medications" placeholder="List current medications (if any)" class="form-input w-full mt-2 rounded-md border-gray-300" />
+          </div>
+
+          <div class="mt-6">
+            <h2 class="text-xl font-semibold text-gray-800 mb-2 border-b pb-1">Family History</h2>
+            <input type="text" name="family history" placeholder="E.g., diabetes, hypertension" class="form-input w-full mt-2 rounded-md border-gray-300" />
+          </div>
+        </section>
+
+        <!-- Upload -->
+        <section>
+          <h2 class="text-xl font-semibold text-gray-800 mb-4 border-b pb-2">Report Upload</h2>
+          <input type="file" name="reportFile" accept="application/pdf"
+            class="block w-full text-sm text-gray-600 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:bg-green-200 file:text-black hover:file:bg-green-300" />
+        </section>
+
+        <!-- Submit -->
+        <div class="pt-6 text-center">
+          <button type="submit" class="px-6 py-3 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-md transition">
+            Submit
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="main.js"></script>
+
+</body>
+</html>

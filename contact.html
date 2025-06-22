@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Dt. Nirmala Joshi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-900">
+    <!-- Header -->
+    <header class="border-b border-gray-200 bg-white shadow-md sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+        <div class="flex items-center gap-3">
+          <div class="text-green-600">
+            <svg class="w-6 h-6" viewBox="0 0 48 48" fill="currentColor">
+              <path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z" />
+            </svg>
+          </div>
+          <span class="font-semibold text-xl tracking-tight">Dt. Nirmala Joshi</span>
+        </div>
+        <nav class="flex gap-6 text-sm font-medium text-gray-600">
+          <a href="index.html" class="hover:text-green-600">Home</a>
+          <a href="about.html" class="hover:text-green-600">About</a>
+          <a href="services.html" class="hover:text-green-600">Services</a>
+          <a href="contact.html" class="text-green-700 font-semibold">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="py-20 px-6 bg-green-50">
+      <div class="max-w-3xl mx-auto text-center mb-10">
+        <h1 class="text-4xl font-bold text-gray-800 mb-3">Get in Touch</h1>
+        <p class="text-lg text-gray-700">I'm here to help you reach your health goals. Fill out the form below or reach out directly.</p>
+      </div>
+
+      <div class="max-w-xl mx-auto bg-white rounded-lg shadow-md p-8 space-y-6">
+        <form action="#" method="POST" class="space-y-5">
+          <div>
+            <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name"
+              class="mt-1 block w-full rounded-md border border-gray-300 p-3 text-gray-800 focus:border-green-500 focus:ring-green-500" required />
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com"
+              class="mt-1 block w-full rounded-md border border-gray-300 p-3 text-gray-800 focus:border-green-500 focus:ring-green-500" required />
+          </div>
+
+          <div>
+            <label for="subject" class="block text-sm font-medium text-gray-700">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Your Subject"
+              class="mt-1 block w-full rounded-md border border-gray-300 p-3 text-gray-800 focus:border-green-500 focus:ring-green-500" />
+          </div>
+
+          <div>
+            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Your message..."
+              class="mt-1 block w-full rounded-md border border-gray-300 p-3 text-gray-800 focus:border-green-500 focus:ring-green-500"></textarea>
+          </div>
+
+          <button type="submit"
+            class="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-md transition">
+            Send Message
+          </button>
+        </form>
+
+        <div class="text-center pt-6 border-t">
+          <p class="text-sm text-gray-600">📧 Email: <a href="mailto:nirmala.joshi30@gmail.com" class="text-green-700 underline">nirmala.joshi30@gmail.com</a></p>
+          <p class="text-sm text-gray-600">📞 Phone: +91 9624682558</p>
+        </div>
+
+        <div class="pt-4">
+          <button onclick="window.location.href='form.html';"
+            class="w-full bg-green-100 hover:bg-green-200 text-green-800 font-semibold py-3 px-6 rounded-md transition">
+            Start the journey with us!
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t bg-white py-8 text-center text-sm text-gray-500">
+      <div class="flex justify-center gap-6 mb-4">
+        <a href="#" class="hover:text-green-600">Twitter</a>
+        <a href="#" class="hover:text-green-600">Instagram</a>
+        <a href="#" class="hover:text-green-600">Facebook</a>
+      </div>
+      <p>© 2024 Dt. Nirmala Joshi. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
