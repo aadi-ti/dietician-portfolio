@@ -27,7 +27,9 @@ exports.handler = async (event) => {
       subject: "Form Confirmation | HPlus Foundation",
       html: `
         <p>Hi ${name},</p>
-        <p>Thank you for submitting your form. We’ve received your details and will get in touch with you soon.</p>
+        <p>Thank you for submitting your form. Please Book Your consultation slot from the link below.</p>
+        <p>https://calendly.com/nirmala-joshi30/30min</p>
+        <p>Hope to hear from you soon!</p>
         <p>Warm regards,<br/>Dt. Nirmala Joshi<br/>HPlus Foundation</p>
       `,
     });
