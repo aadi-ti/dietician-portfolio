@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   async function sendConfirmationEmail(name, email) {
     try {
-      const res = await fetch("/.netlify/functions/sendEmail", {
+      const res = await fetch("/api/sendEmail", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email }),
