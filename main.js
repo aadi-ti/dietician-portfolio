@@ -78,29 +78,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       console.log("✅ Data inserted:", data);
 
-      // ✅ Send confirmation email
-      try {
-        const response = await fetch("http://localhost:5000/send-confirmation", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-            email: payload.email,
-            full_name: payload.full_name
-          })
-        });
-
-        if (!response.ok) {
-          console.error("❌ Email failed:", await response.text());
-          alert("Form saved, but failed to send confirmation email.");
-        } else {
-          console.log("📧 Confirmation email sent.");
-        }
-      } catch (emailErr) {
-        console.error("❌ Email request error:", emailErr);
-        alert("Form saved, but failed to send confirmation email.");
-      }
+      // Call Netlify Function to send email
+      await sendConfirmationEmail(payload.full_name, payload.email);
 
       alert("✅ Form submitted successfully!");
       form.reset();
@@ -112,6 +91,21 @@ document.addEventListener("DOMContentLoaded", () => {
     } finally {
       submitBtn.disabled = false;
       submitBtn.textContent = "Submit";
+    }
+  }
+
+  async function sendConfirmationEmail(name, email) {
+    try {
+      const res = await fetch("/.netlify/functions/sendEmail", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email }),
+      });
+
+      const result = await res.json();
+      console.log("Email result:", result);
+    } catch (err) {
+      console.error("Email error:", err);
     }
   }
 
